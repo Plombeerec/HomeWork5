@@ -32,12 +32,31 @@ int SortAndCount(int[] array)
     
 }
 
+
+int CheckMin()
+{
+    int min = Convert.ToInt32(Console.ReadLine());;
+    if(min<=99 ^ min >= 999 ) Console.WriteLine("Incorrect number"+ min);
+
+    return min;
+}
+int CheckMax()
+{
+    int max = Convert.ToInt32(Console.ReadLine());
+    if( max<=99 ^ max > 999) Console.WriteLine("Incorrect number"+ max);
+
+    return max;
+}
+
 Console.WriteLine("Введите размер массива");
 int Size = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите минимальное значение");
-int Min = Convert.ToInt32(Console.ReadLine());
+//int Min = Convert.ToInt32(Console.ReadLine());
+int Min = CheckMin();
 Console.WriteLine("Введите максимальное значение");
-int Max = Convert.ToInt32(Console.ReadLine());
+//int Max = Convert.ToInt32(Console.ReadLine());
+int Max = CheckMax();
+
 
 int[] MyBestArray = NewArray(Size, Min, Max);
 ShowArray(MyBestArray);
