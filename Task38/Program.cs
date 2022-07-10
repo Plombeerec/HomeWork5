@@ -21,24 +21,22 @@ void ShowArray(double[] array)
     Console.WriteLine();
 }
 
-double FindMin(double[] array)
+double FindResult(double[] array)
 {
     double min = array[0];
     double max = array[0];
-    double result = 0;
     for(int i = 1; i < array.Length; i++)
     {
         if(min > array[i])
         {
             min = array[i];
         }
-        else if(max < array[i])
+        if(max < array[i])
         {
             max = array[i];
         }
-        result = max - min;
     }
-    return result;
+    return max - min;
 }
 
 
@@ -51,4 +49,4 @@ int Max = Convert.ToInt32(Console.ReadLine());
 
 double[] MyBestArray = Arrayt38(Size, Min, Max);
 ShowArray(MyBestArray);
-Console.WriteLine("Result is " + FindMin(MyBestArray));
+Console.WriteLine("Result is " + FindResult(MyBestArray));
