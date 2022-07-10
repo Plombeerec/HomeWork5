@@ -23,25 +23,19 @@ void ShowArray(double[] array)
 
 double FindMin(double[] array)
 {
-    double min = 0;
-    double max = 0;
+    double min = array[0];
+    double max = array[0];
     double result = 0;
     for(int i = 1; i < array.Length; i++)
     {
-        min = array[0];
-        max = array[0];
-
         if(min > array[i])
         {
             min = array[i];
         }
-        
-        
         else if(max < array[i])
         {
             max = array[i];
         }
-
         result = max - min;
     }
     return result;
